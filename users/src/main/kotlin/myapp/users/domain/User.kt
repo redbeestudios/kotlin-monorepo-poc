@@ -1,8 +1,9 @@
 package myapp.users.domain
 
-data class User (
-    val name: String,
-    val lastName: String,
-    val email: String,
+interface User {
+    val id: Int
+    val name: String
+    val lastName: String
+    val email: String
     val password: String
-    )
+}
