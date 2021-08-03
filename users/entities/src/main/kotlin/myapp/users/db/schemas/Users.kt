@@ -1,6 +1,8 @@
 package myapp.users.db.schemas
 
 import myapp.users.db.entities.UserEntity
+import org.ktorm.database.Database
+import org.ktorm.entity.sequenceOf
 import org.ktorm.schema.Table
 import org.ktorm.schema.int
 import org.ktorm.schema.varchar
@@ -12,3 +14,5 @@ object Users : Table<UserEntity>("users") {
     val email = varchar("email").bindTo { it.email }
     val password = varchar("password").bindTo { it.password }
 }
+
+val Database.users get() = this.sequenceOf(Users)

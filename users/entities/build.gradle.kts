@@ -10,6 +10,6 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation(project(":users"))
+    implementation(project(":users:core"))
     compile("org.ktorm:ktorm-core:${findProperty("ktorm_version")}")
 }
