@@ -1,2 +1,6 @@
 rootProject.name = "kotlin-monorepo"
-include("users:core", "users:entities")
+include("shared:database")
+
+include("users:core")
+include("users:entities")
+include("users:rest")

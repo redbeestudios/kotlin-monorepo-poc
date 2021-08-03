@@ -1,6 +1,6 @@
 package myapp.users.db.entities
 
-import myapp.users.domain.User
+import myapp.users.User
 import org.ktorm.entity.Entity
 
 interface UserEntity : Entity<UserEntity>, User {

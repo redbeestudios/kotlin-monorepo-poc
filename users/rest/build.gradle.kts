@@ -10,7 +10,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation(project(":shared:database"))
     implementation(project(":users:core"))
-    implementation("org.ktorm:ktorm-core:${findProperty("ktorm_version")}")
+    implementation("org.springframework:spring-context:${findProperty("spring_framework_version")}")
+    implementation("org.springframework:spring-web:${findProperty("spring_framework_version")}")
 }

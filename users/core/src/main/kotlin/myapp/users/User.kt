@@ -1,4 +1,4 @@
-package myapp.users.domain
+package myapp.users
 
 interface User {
     val id: Int
