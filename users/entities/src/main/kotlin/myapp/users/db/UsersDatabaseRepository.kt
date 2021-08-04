@@ -11,8 +11,10 @@ import org.ktorm.entity.add
 import org.ktorm.entity.filter
 import org.ktorm.entity.removeIf
 import org.ktorm.entity.toList
+import org.springframework.stereotype.Service
 import javax.sql.DataSource
 
+@Service
 class UsersDatabaseRepository(dataSource: DataSource) : DatabaseRepository(dataSource), UsersRepository {
     override fun findAll(): List<UserEntity> {
         return database.users.toList()

@@ -1,5 +1,8 @@
 package myapp.users
 
+import org.springframework.stereotype.Service
+
+@Service
 class UsersApplication(
     private val repository: UsersRepository
 ) {
