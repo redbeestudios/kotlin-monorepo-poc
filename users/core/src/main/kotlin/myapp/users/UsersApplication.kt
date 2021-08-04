@@ -14,6 +14,10 @@ class UsersApplication(
         return repository.findById(id)
     }
 
+    fun findByIds(ids: List<Int>): List<User?> {
+        return repository.findByIds(ids)
+    }
+
     fun create(user: UserModel): User {
         return repository.create(user)
     }

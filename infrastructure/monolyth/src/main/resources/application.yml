@@ -1,0 +1,5 @@
+users:
+    database:
+        url: "jdbc:mysql://localhost:3306/users"
+        username: "root"
+        password: "mysql_password"

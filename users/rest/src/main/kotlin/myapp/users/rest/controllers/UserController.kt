@@ -3,13 +3,13 @@ package myapp.users.rest.controllers
 import myapp.users.User
 import myapp.users.UserModel
 import myapp.users.UsersApplication
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.server.ResponseStatusException
 
 @RestController
-class UserController @Autowired constructor(
+@RequestMapping("users")
+class UserController(
    private val usersApp: UsersApplication
 ) {
     @GetMapping("/")
