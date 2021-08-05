@@ -19,7 +19,7 @@ class UsersRestRepository(
     val baseUrl = configuration.url
 
     override fun findAll(): List<User> {
-        return fetch<List<User>>(Request.Builder().url(baseUrl).build()) ?: emptyList()
+        return fetch<List<User>>(Request.Builder().url("$baseUrl/").build()) ?: emptyList()
     }
 
     override fun findById(id: Int): User? {
@@ -33,14 +33,14 @@ class UsersRestRepository(
 
     override fun create(user: UserModel): User {
         return fetch<User>(Request.Builder()
-            .url(baseUrl)
+            .url("$baseUrl/")
             .post(requestBody(user))
-            .build()
+            .build(),
         ) ?: throw Exception("Couldn't receive a user while creating through HTTP, operation status unknown")
     }
 
     override fun delete(id: Int) {
-        val response = client.newCall(Request.Builder().url(baseUrl).delete().build()).execute()
+        val response = client.newCall(Request.Builder().url("$baseUrl/").delete().build()).execute()
         ensureResponseIsOk(response)
     }
 }

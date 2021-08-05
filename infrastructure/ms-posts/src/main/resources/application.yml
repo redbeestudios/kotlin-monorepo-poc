@@ -1,0 +1,13 @@
+posts:
+  database:
+    url: "jdbc:mysql://localhost:3306/posts"
+    username: "root"
+    password: "mysql_password"
+
+users:
+  rest:
+    client:
+      url: "http://localhost:8081/users"
+
+server:
+  port: 8082

@@ -1,11 +1,8 @@
 package myapp.posts.db.entities
 
-import myapp.posts.Post
+import myapp.posts.intermediates.UnhydratedPost
 import org.ktorm.entity.Entity
 
-interface PostEntity : Entity<PostEntity> {
-    val id: Int
-    val content: String
-    val author: Int
+interface PostEntity : Entity<PostEntity>, UnhydratedPost {
     companion object : Entity.Factory<PostEntity>()
 }

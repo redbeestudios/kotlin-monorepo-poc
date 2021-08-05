@@ -1,4 +1,3 @@
-import org.gradle.api.tasks.bundling.Jar
 import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
@@ -43,5 +42,12 @@ subprojects {
 
         bootJar.enabled = false
         jar.enabled = true
+    }
+
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions {
+            freeCompilerArgs = listOf("-Xjsr305=strict")
+            jvmTarget = "1.8"
+        }
     }
 }

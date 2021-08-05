@@ -15,3 +15,5 @@ include("posts:entities")
 include("posts:rest")
 
 include("infrastructure:monolyth")
+include("infrastructure:ms-users")
+include("infrastructure:ms-posts")

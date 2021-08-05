@@ -27,7 +27,7 @@ class UsersDatabaseRepository(configuration: UsersDataSourceConfiguration) : Dat
     }
 
     override fun findByIds(ids: List<Int>): List<User> {
-        return database.users.filter { it.id inList ids }.toList()
+        return database.users.filter { it.id inList(ids) }.toList()
     }
 
     override fun create(user: UserModel): User {
