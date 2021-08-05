@@ -14,7 +14,7 @@ class UsersApplication(
         return repository.findById(id)
     }
 
-    fun findByIds(ids: List<Int>): List<User?> {
+    fun findByIds(ids: List<Int>): List<User> {
         return repository.findByIds(ids)
     }
 
